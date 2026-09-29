@@ -1,0 +1,50 @@
+1] typing_extensions :-
+typing_extensions is a Python library that provides additional type-hinting features that may not yet be available in your Python version's built-in typing module.
+In short typing_extensions gives us extra tools for writing type hints in Python.
+Other commonly used features include:
+TypedDict
+Literal
+NotRequired
+Required
+Annotated
+
+2] TypedDict :-
+TypedDict allows you to define what keys a dictionary should have and what type of value each key should contain.
+
+LangGraph commonly uses TypedDict to define the state of the graph:
+from typing_extensions import TypedDict
+
+class State(TypedDict):
+    question: str
+    answer: str
+
+3]os
+os is a built-in Python module that allows you to interact with the operating system.
+This is very common in your GenAI/RAG projects to get the environment variable:
+
+import os
+api_key = os.getenv("GROQ_API_KEY")
+
+4] langchain_groq :-
+LangChain integration that lets you use Groq-hosted LLMs inside a LangChain application.
+langchain_groq = LangChain integration for calling LLMs through Groq.
+langchain_groq provides a convenient way to connect LangChain with Groq's inference API.
+
+5] load_dotenv()
+load_dotenv() comes from the python-dotenv package.
+It is used to load environment variables from a .env file into your Python application.
+
+For example, in your RAG project in our .env we have:
+GROQ_API_KEY=your_api_key_here
+MODEL_NAME=openai/gpt-oss-120b
+
+so we load it using load_dotenv and then we can access the variables using os.getenv()
+
+6] Temperature in an LLM :-
+Temperature controls how random or creative the LLM's responses are.
+Temperature = controls the randomness of the model's output.
+>Low temperature (temperature = 0) - The model tends to choose the most likely response.
+>Higher temperature(temperature = 0.7) - The model has more freedom to choose among likely tokens, so responses can vary more.
+>Very high temperature(temperature = 1.5) -     The output becomes more random and can become less predictable or less coherent.
+---temperature is a parameter that controls the randomness of an LLM's token selection. A lower temperature produces more deterministic and predictable responses, while a higher temperature produces more varied and creative responses.
+
