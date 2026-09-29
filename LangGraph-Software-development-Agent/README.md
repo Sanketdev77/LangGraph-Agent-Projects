@@ -383,8 +383,8 @@ Final Report
 ---
 
 ## Author
-Sanket Zambare
 
-**Ankit Mirajkar**
+**Sanket Zambare**
 
-GitHub: [Ankitmirajkar1](https://github.com/Ankitmirajkar1)
+
+https://github.com/Sanketdev77
